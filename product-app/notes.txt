@@ -1,0 +1,17 @@
+1. create a react app 
+	npx create-react-app product-app
+2. Install local json server
+	npm install -g json-server
+3. create a db.json inside root directory
+	{
+		"products":[
+			{"id": 1,  "name":"Laptop", "price":1000},
+			{"id":2, "name":"Mobile", "price":500}
+		]
+	}
+4. navigate to the root directory, start the local json server
+	json-server --watch db.json	
+	
+5. install axios package -> CRUD, C-POST, R-GET, U-PUT, D-DELETE
+	npm install axios
+6. create product list component
