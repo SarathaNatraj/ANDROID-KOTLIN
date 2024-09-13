@@ -1,0 +1,88 @@
+Building Responsive and Interactive Web Application
+
+HTML5.0 and CSS3.0
+
+Softwares Required
+  1. NodeJS
+  2. npm
+  3. VisualStudio Code (HTML, CSS, BootStrap, Javascript, React) ---> IDE
+  4. live-server
+  
+  In the terminal prompt 
+    npm install -g live-server
+   
+   live-server will be installed on the system.
+   
+  To start the live-server
+      live-server -----> index.html ----> automatically opened in the browser view
+  
+  HTML : Hypertext Markup Langauge
+     Markup Langauge is a set of tags which instruct the bowser to compile the code
+     and dispaly the content on the browser.
+     It is a tag based langauge
+     
+  Elements of HTML
+     html ---> <html>   </html>
+     head ---> <head>   </head>
+     title---> <title>  </title>
+     body ---> <body> </body>
+     
+ 
+  Basic tags of html
+  
+  <p> ---> Paragraph tag
+  <b> ---> text in bold letters
+  <u> ---> undeline the test
+  <i> ---> text will get displayed in italics
+  
+  
+  Text alignment Tags
+     <center>, <left> , <right>
+     
+  Embedding images in html
+  
+     <img src="url"  height=    width= ></img>
+     
+     
+  Hyperlink
+  
+      <a href="url">click here </a>
+      
+  px: pixel (1 px = 1/96th of 1 inch)
+  em: relative to the font-size of the element
+       2em : 2 times the size of the current font
+  
+  Viewport
+  
+  The user's visibility area of the web page
+  The viewport varies according to the devices.
+  
+  vw : viewport width
+  vh : viewport height
+  
+
+CSS stands for Cascading stylesheet
+
+  1. Inline CSS ---------> styles are specified in line with the HTML Tags
+  2. Internal CSS -------> styles are specifies within the HTML file but it will be in style tag
+  3. External CSS --------> a seperate .css file and that can be linked to HTML Page
+  
+ 
+ The part of the HTML page is identified using id or class.
+ 
+ if we are using id in html then we need to apply styles using #tag in css
+ if we are using class in html, then we need to apply styles using .tag in css
+ 
+ We are create a Web Page
+ 
+ 1. Header
+      a) Company Logo
+      b) Navigation bars
+      c) Signup Button
+ 2. Main
+      a) Hero Unit
+      b) 3 different images
+      c) Paper layout
+ 3. Footer
+      a) copyrights
+ 
