@@ -1,0 +1,56 @@
+Spring Container
+	- responsible for creating, configuring and assembling Spring Beans
+
+Spring Bean 
+	- plain Java Class, which has follow some rules provided Spring Container
+	
+	1. Class must be public
+	2. Variables should  be private
+	3. Methods should public
+	4. class should be under a package
+	5. Can have Default const with getter & setter or parameterised constructor with getter & setter
+	6. Class can extend or implement only classes or interface from Spring Frameework API
+	7. Class can override equals(), toString(), hashCode() methods
+	8. class can implements java.io.Serializable
+	9. Class can use Core Java Annotations,Spring Framework Annotations and some more integrations
+
+Spring Configuation can be done in 3 ways
+	
+	1. XML based configuration(SpringBoot
+	2. Java based configuration
+	3. Annotation based configuration
+
+
+1. XML based Configuration
+	i. Create xml inside the resoures folder (any name)
+	ii. Same of xml file has be used in your Test(App.java) class
+	iii. Inside your test/main class
+	
+		//Creating the Spring Container 
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		
+		//Fetch the Bean
+		//Fetch the bean using id which defined in the context / beans xml
+        GreetingService greetService = (GreetingService) context.getBean("greetingService");
+        
+		 //Accessing with class
+        Book book = context.getBean(Book.class)
+	
+
+	ApplicationContext(interface) - spring context package - responsible creating beans, configuring
+	ClassPathXmlApplicationContext(class) - spring context package - load your xml file 
+
+2. Java Based Configuration
+	i. Create ApplicationConfiguration/AppConfig class using @Configuration 
+	ii. You define all the beans with the getter Method of bean class with @Bean annotation
+	iii. Inside your test/App.java class
+		
+		ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
+        
+        
+        Country country = (Country) context.getBean("countryObj");
+        
+        System.out.println(country);
+        
+	
+	

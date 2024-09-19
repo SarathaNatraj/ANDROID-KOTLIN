@@ -1,0 +1,144 @@
+Scope of the Bean
+	1. Singleton - one instance of the bean will be created, defult scope
+	2. Prototype - every time new bean will be created.
+
+ Spring MVC
+	3. Request
+	4. Session
+	5. application
+	6. websocket
+
+
+How to define scope of the Bean	
+	XML based
+		beans.xml
+			<bean id="" class="" scope="singleton | prototype" />
+			
+	Annotation based
+		@Component
+		@Scope(value = "singleton | prototype")
+		in every bean class
+		
+		
+Spring MVC project
+
+2 ways 
+
+Spring MVC Framework
+Pre-requisite : Tomcat server installed
+IDE : Eclipse , STS (Dynamic Web Project)
+
+	
+	1. Create Dynamic Web Project, Target runtime(Tomcat) 
+	2. Right click your project, Configure -> Convert to Maven Project
+	3. pom.xml -> dependencies for Spring Web -> JSP, HTML, Spring MVC - framework, servlet - dependency
+	
+	4. WEB-INF -> web.xml
+		<?xml version="1.0" encoding="UTF-8"?>  
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">  
+  <display-name>SpringMVC</display-name>  
+<servlet>    
+    <servlet-name>spring</servlet-name>    
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>    
+    <load-on-startup>1</load-on-startup>      
+</servlet>    
+<servlet-mapping>    
+    <servlet-name>spring</servlet-name>    
+    <url-pattern>/</url-pattern>    
+</servlet-mapping>  
+</web-app>   
+
+	5. WEB-INF -> spring-servlet.xml 
+		
+			<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+
+	<!-- Scans within the base package of the application for @Components to configure as beans -->
+	<!-- @Controller, @Service, @Configuration, etc. -->
+	<context:component-scan base-package="com.techacademy.controller" />
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<mvc:annotation-driven />
+
+</beans>
+	6. controller -> AppController -> @Controller 
+		define methods with request mapping
+		make corresponding JSP pages should be there in webapp
+		
+		
+	7. Start the project, add the project, access the URL
+ 
+
+	Spring Boot Framework - MVC
+	
+		1. Create project with dependencies are Spring Web(Embedded tomcat), thymeleaf (html) in start.spring.io
+		
+		2. create  controller package, AppController with @Controller, @RequestMapping annotation-driven
+		
+		3. templates folder keep your html files
+		
+		4. Run app as normal java app
+		
+		
+		
+		
+Spring Security
+
+	1. Add dependency
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			
+		</dependency>
+	2. Create SecurityConfig class inside config package
+		
+		
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+public class SecurityConfig{
+	
+	@Bean
+	public SecurityFilterChain securityFilterchain(HttpSecurity http) throws Exception {
+		http
+		.authorizeRequests()
+		.requestMatchers("/employees/**,/public/**").permitAll()
+		.anyRequest().authenticated()
+		.and()
+		.httpBasic();
+		
+		return http.build();
+		
+	}
+	
+	@Bean
+	public UserDetailsService userDetailsService() {
+		InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+		manager.createUser(User.withUsername("admin").password("{noop}admin").roles("user").build());
+		
+		return manager;
+	}
+	
+	
+
+}
+
+	3. Test the Spring security,  In the Postman, navigate to Authorization tab, in the drop down choose
+			Basic Auth -> type username and password, then send a Request
+		
+		

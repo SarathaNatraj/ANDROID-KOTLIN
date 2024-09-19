@@ -1,0 +1,105 @@
+Application - used to perform some task 
+Ex -> Application Software  Word, Excel, Calculator, Browser
+      System Software - Operating OS, Networking tools
+
+
+Using Java Application  -> Core Java Application or Desktop -> o/p will console window - Core Java
+			   Web Application -> o/p will be on the Browser -> Spring Framework (Back End) , FrontEnd (React UI Framework)
+			  Mobile application -> o/p will be on the mobiles  -> Android Framework
+			  Enterprise application -> Java Applets -> Banking 
+
+Framework -> built on top of the programming 
+	  -> pre-built structure or set of tools to develop your application
+	  -> has libraries, templates and guidelines to streamline you development process
+
+	 -> web, mobile, desktop
+
+select * from user where username="sowmya" and password="abc"
+
+Spring Framework 
+	-> java based framework developing enterprise applications
+	-> flexible architctures, data access, security 
+
+Key Components 
+	1. Spring Core  - IoC - Inversion Of Control - Objects in the Spring applications are managed by the Spring IoC Container.
+	2. DI
+	3. AOP - Aspect Oriented Programming
+	4. Spring Data - Data Access - support for database through JDBC(low-level) or ORM (Hibernate)
+	5. Transaction Management 
+	6. MVC - Model View Controller
+	7. Security - authentication, authorization, encryption(process of converting data into code to prevent unauthorized access), decryption (converting code into data)
+	8. Testing - Core Java, 
+
+
+
+
+Steps to Create Spring Core app
+1. Create a maven project
+2. Add a dependency Spring Core, Context
+	<dependencies>
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>6.1.1</version>
+</dependency>
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-context</artifactId>
+  <version>6.1.1</version>
+</dependency>
+</dependencies>
+
+3. Create resources folder, applicationContext.xml /beans.xml
+	<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="greetingService"
+		class="com.mycompany.app.GreetingService" />
+</beans>
+
+4. Create a normal Java Bean class ,
+	package com.mycompany.app;
+
+public class GreetingService {
+	public String hello() {
+		return "Hello, Spring!";
+	}
+
+}
+
+5. Create MainApp 
+	Load the context -> through XML 
+	Get bean 
+	Access those methods inside the beans
+
+	import org.springframework.context.ConfigurableApplicationContext;
+	import org.springframework.context.support.ClassPathXmlApplicationContext;
+	
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        
+        //Load the Spring Context - Creating the Spring Container
+      //  ApplicationContext context = new ClassP
+        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        
+        
+        //GreetingService greetService = new GreetingService()
+        //Fetch the bean using id which defined in the context / beans xml
+		
+		  GreetingService greetService = (GreetingService)
+		  context.getBean("greetingService");
+	}
+}
+	
+	Spring Core - DI, IoC
+	Spring MVC,
+	Spring AOP 
+	
+	Spring Boot 

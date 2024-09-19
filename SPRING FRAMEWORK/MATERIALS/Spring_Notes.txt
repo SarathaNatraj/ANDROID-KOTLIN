@@ -1,0 +1,137 @@
+Inversion Of Control - Objects in the Spring applications are managed by the Spring IoC Container.
+DI - Dependency Injection - Connecting objects with the existing objects
+
+XML Based configuration
+	3 ways 
+		setter based injection - 
+			define the property,
+			getter/setter property
+			beans.xml 
+				define dependent bean 
+				add as property reference in the main bean
+				
+		 constructor based injection - 
+			define the property, 
+			define constructor with the property, 
+			beans.xml 
+				define the add the depend bean 
+				add as <constructor-arg ref="dependBean"> in the main bean
+				
+		method based injection
+			define the normal(dependent) class,
+			define one  interface,
+			define one more (main) class implements the interface., plus property as dependent class
+			interface method 
+				connect with dependent class method
+			beans.xml 
+				define main bean
+			
+				
+		lifecycle -> upto - spring version 2.5 
+			init, destroy method in bean level
+			beans.xml -> init-method="", destory-method=""
+			implements InitilaisingBean interface-> afterPropertiesSet() ->
+			
+			after 2.5 -> LifeCycle
+			
+			
+
+Java Based Configuration
+	2 waysstter based injection - 
+			define the property,
+			getter/setter property
+			ApplicationConfiguration.java - has all beans -> @Configuration
+				define dependent bean  with @Bean annotation
+				add as property reference in the main bean setter method
+		 constructor based injection - 
+			define the property, 
+			define constructor with the property, 
+			ApplicationConfiguration.java - has all beans
+				define the add the depend bean with @Bean(name="nameWithProperty")
+				define one more method which you object with parameter
+		
+
+Annotation Based Configuration
+	
+	Create maven project
+	Add the dependency spring core
+	define each and every Model with @Component, @Value, @Autowired - dependency injection
+	resources folder beans.xml inside  <context:component-scan base-package="com.mycompany.app.model"/> 
+			ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
+									or
+		  ApplicationContext context = new AnnotationConfigApplicationContext("com.mycompany.app.model");
+      
+	Main method 
+		load the spring container 
+		using getBean method access those objects
+		
+	lifecycle
+		@PostConstruct -> after bean initialsed bean is getting called, User user = new User("admin", "admin")
+		@PreDestroy -> before Spring removes from the context,  db.close(),session.close() 
+
+
+
+
+
+Car -> tyre -> Engine
+
+Employee  -> Address 
+
+Store -> Item
+
+Inheritance - is a relationship, has a relationship
+
+
+class Car{
+	
+	platNo;
+	ownerName;
+	location;
+
+	//Injection - adding other classes into 
+	Tyre tyre;
+	Engine engine;
+
+}
+
+class Tyre{
+	tyreSize;
+	brandName;
+}
+
+class Engine{
+	//
+
+
+Annotation - Spring Core
+
+	@Bean
+	@Component
+	@Configuration
+	@Value
+	@Autowired
+
+
+	@ComponentScan
+	@Qualifier
+	@PrimaryValue
+
+
+Spring Web
+	@RestController
+	@Service
+	@Repository
+	
+
+
+
+
+Assignment
+	
+
+	1. Car Engine , Tyre
+	2. User
+	
+
+	
