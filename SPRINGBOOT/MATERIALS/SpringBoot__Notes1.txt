@@ -1,0 +1,121 @@
+Web Application- JDK, JVM, Web Server - o/p will be browser - pending
+Spring Web Application - JDK, JVM,Spring Framework, Web Server(tomcat) - o/p will be browser-
+Spring REST  Application - JDK, JVM,Spring Framework, Web Server(tomcat) - o/p will be Postman. 
+Spring Boot Web Application - JDK, JVM, Spring Boot(built-in Webserver, Spring boot framework)- 
+
+
+Spring boot - open source Java based framework to create stand-alone, production-grade spring-based applications
+	  - reduces development process, automatically add many configuration(configuration for web, configuration for database, configuration for CRUD operations,configuration for security) 
+		let the developers focus on the building robust applications
+
+Features:-
+
+	1. Auto Configuration - automatically configures datasources, dependencies, application.properties 
+	2. Embedded Server - Tomcat web server embededd in the spring boot
+	3. Standalone application - making basic java requirements has be fulfilled 
+	4. Starter - springboot-starter-web, springboot-starter-data-jpa,spring-boot-starter-test
+	5. Actuator - status of server, beans, env, metrics
+	6. Spring boot data jpa - @Entity, @Service, @Controller
+	7. Spring boot security -
+
+1. Install Postman from https://www.postman.com/downloads/ - choose lightweight api Client
+
+WEB - 4 different http methods
+
+	1. Read - Get method - GetMapping
+	2. Insert - Post method - PostMapping
+	3. Delete - Delete method - DeleteMapping
+	4. Update - Update method - PutMapping
+
+web url - request / reponse
+	request - you sending query to get the info
+ 	response - you will recieve 
+
+	Google search - query String = "springboot intro" - request -
+			page/ search results  - response 
+
+Informational responses (100 – 199)
+Successful responses (200 – 299)
+Redirection messages (300 – 399)
+Client error responses (400 – 499)
+Server error responses (500 – 599)
+
+
+pos
+spring-boot-starter – this lets spring boot autoconfigure your application
+spring-boot-starter-web – this dependency tells spring boot that your application is a web application. This adds the functionality of @Controller, @RequestMapping, etc.
+spring-boot-starter-thymeleaf – web app needs some views like JSP or HTML. Thymeleaf is a server-side HTML template engine. 
+	Instead of traditional JSP with JSTL or format tags, we will use Thymeleaf.
+spring-boot-devtools – this is an optional dependency but this makes your development faster.
+ This dependency automatically restarts or hot-swap your changes to the running tomcat server, thus removing the need to restart the application whenever there are changes in codes.
+
+
+
+<table >
+	
+	<tr>
+		<td>Harsha</td>  
+		<td>Keerthi</td>
+	</tr>
+</table>
+
+
+
+<table>
+	<tr th:obj="${book}">
+		<td th:text="${book.title}"/>
+		<td th:text="${book.author}"/>
+	</tr>
+</table>
+
+
+
+Spring Data JPA - simplify data access for Spring Applications 
+		-  part of Spring Framework
+		- JPA - Java Persistence API - Java specification for managing, persisting and accessing the data in Java applications
+	
+		- - provides high level abstraction over JPA std, making easier to work with the databases in Spring applns.
+		- eleminates lot duplicate(boilerplate) code typically associated with common data access with CRUD operations
+
+@Entity
+class Employee{
+	int empId;
+	String empName;
+	Double empSalary;
+
+}
+
+@Repository
+public interface EmployeeRepository{
+
+	public double sumOfAllEmpSalary(); //select sum(salary) from emp
+}
+
+
+Key Features:-
+	1. Repository interfaces  - create interface that define CRUD operations without actual implementations, 
+		Spring DATA JPA - dynamically generates the implementations at runtime.
+	2. Query methods - you can derive query methods from repository interface,Spring DATA JPA - dynamically generates the implementations at runtime.
+	3. Custom queries - JPQL , HQL , SQL 
+	4. Pagination and Sorting - builtin - support for Paging and sortinge
+	5. Auditing - Automatic tracking of created and modified dates for entities
+
+
+
+
+Lombok - Optional dependency
+		- will generates Constructors, getter/setter, toString method
+		- @NoArgsConstructor - empty constructor
+		- @AllArgsConstructor -  paramterised constructor
+		- @Data - getter/setter, toString 
+		
+		
+Spring Data JPA Annotations(springframework.data.jpa)
+	
+		@Entity - treated as table-> from the database	
+		@Table - creates a table with name you provided (name = "products")
+			   - if there is no @Table, table will be created as classname(product -> follow db naming conventions)
+		@Id    - identifies a Primary key in a table,
+		@GeneratedValue - follows generation of primary keys
+		JpaRepository 
+		

@@ -99,6 +99,29 @@ public class CustomerController {
 
         return "list-customers";
     }
+    
+    
+    @GetMapping("/public/home")
+    public String publicHome() {
+    	return "home";
+    }
+    @GetMapping("/login")
+    public String login() {
+    	return "login";
+    }
+    
+    @PostMapping("/auth")
+    public String authenticate(@RequestParam(value = "uname") String user, @RequestParam(value = "psw")  String pwd) {
+    	System.out.println(" inside authenticate");
+    	System.out.println("uname : "+user+"\t psw : "+pwd);
+    	
+    	if(user.equalsIgnoreCase("guest") && pwd.equalsIgnoreCase("guest")) {
+    		 return "redirect:/customer/list";
+    	}else if(user.equalsIgnoreCase("admin") && pwd.equalsIgnoreCase("admin")) {
+    		return "redirect:/customer/list";
+    	}else
+    			return "login";
+    }
 }
 
 
