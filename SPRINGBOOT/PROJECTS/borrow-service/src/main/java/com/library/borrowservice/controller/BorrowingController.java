@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.library.borrowservice.model.Borrowing;
@@ -22,8 +23,9 @@ public class BorrowingController {
     private BorrowingService borrowingService;
 
     @PostMapping
-    public Borrowing borrowBook(@RequestBody Borrowing borrowing) {
-        return borrowingService.borrowBook(borrowing);
+    public String borrowBook(@RequestBody Borrowing borrowing) {
+    	String result = borrowingService.borrowBook(borrowing);
+    	return result;
     }
 
     @PostMapping("/return/{id}")
