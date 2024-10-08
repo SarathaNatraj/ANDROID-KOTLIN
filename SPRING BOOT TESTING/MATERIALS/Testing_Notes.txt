@@ -1,0 +1,38 @@
+Front End Testing -> Unit testing - business logic (junit)
+				  -> UI Testing - UI Components loading, interaction(react testing library)
+				  
+Mobile Testing  -> TDD -> Unit testing - business logic	(junit)
+				-> BDD -> UI testing -> UI Components loading, interaction(cucumber,espresso)
+				
+Back End Testing -> Unit testing - business logic (junit, mockito)
+				 -> Integreation testing - combining layers (springboot testing annotations)
+				 -> End to End testing - overall testing (Rest assured)
+				 
+				 
+Repository Testing (Unit  testing)
+				-> @DataJpaTest -> class level annotations
+				-> Autowire the corressponding repository
+				-> In each test method, we perform a specific operation (e.g., save a user, find a user by username) 
+					and then assert the expected outcome
+					
+Service Testing (Integreation testing)
+				-> @SpringBootTest -> class level annotations
+				-> Mock the corressponding repository 
+						@Mock
+						private ProductRepository productRepo;
+				-> InjectMock the corressponding service class implementation
+						@InjectMocks
+						private ProductServiceImpl productService;
+				-> In each test method, we set up behavior for the mocked repository using Mockito.when().
+				-> We then call methods on the XXXXService and assert on the expected behavior.
+
+Controller Testing (API Testing)
+				-> @SpringBootTest -> class level annotations
+				-> @AutoConfigureMockMvc(addFilters = false) - class level annotations // enable and configure auto-configuration of MockMvc
+				-> Auto wire the MockMvc for testing controller
+						@Autowired // Mocking class tailored for testing the web layer, http methods
+						private MockMvc mockMvc;
+				-> In each test method, perform the operation mockMvc.perform(post/get/put/delete) 
+				-> For assertions result.andExpect()
+				
+						
