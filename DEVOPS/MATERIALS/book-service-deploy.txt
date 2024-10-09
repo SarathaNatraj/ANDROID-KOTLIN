@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from the version control system
+                git url:'https://github.com/SarathaNatraj/book-service.git', branch:'main'
+            }
+        }
+         stage('Clean') {
+            steps {
+                script {
+                    // Clean and build the Spring Boot application
+                    bat 'mvn clean'
+                }
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                script {
+                    // Clean and build the Spring Boot application
+                    bat 'mvn install'
+                }
+            }
+        }
+
+       
+    }
+}

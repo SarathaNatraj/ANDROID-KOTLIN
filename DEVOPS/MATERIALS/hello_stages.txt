@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Welcome') {
+            steps {
+                echo 'Welcome to Jenkins Pipeline Script'
+            }
+        }
+        stage('Practice') {
+            steps {
+                echo 'Practising to Jenkins Pipeline Script'
+            }
+        }
+        stage('Excel') {
+            steps {
+                echo 'Excelling to Jenkins Pipeline Script'
+            }
+        }
+    }
+}

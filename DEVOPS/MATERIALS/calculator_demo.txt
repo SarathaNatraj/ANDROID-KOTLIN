@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+      parameters{
+        string(name:'PARAM1',defaultValue:"10",description:'')
+        string(name:'PARAM2',defaultValue:"15",description:'')
+      }
+    stages {
+        stage('Addition') {
+            steps { 
+                   echo 'Addition'
+                 echo "${params.PARAM1.toInteger() + params.PARAM2.toInteger()}"
+                 }
+        }
+         stage('Subtraction') {
+            steps { 
+                 echo 'Subtraction'
+                 echo "${params.PARAM1.toInteger() - params.PARAM2.toInteger()}"
+            }
+        }
+        stage('Multiplication') {
+                steps { 
+                 echo 'Multiplication'
+                echo "${params.PARAM1.toInteger() * params.PARAM2.toInteger()}"
+                }
+        }
+        stage('Division') {
+            steps { 
+            echo 'Division'
+            echo "${params.PARAM1.toInteger() / params.PARAM2.toInteger()}"
+                 }
+        }
+    }
+}

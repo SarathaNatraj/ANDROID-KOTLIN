@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    
+
+    stages {
+                stage('Checkout') {
+            steps {
+                // Checkout the code from the version control system
+                git url:'https://github.com/SarathaNatraj/SpringBootRestAPI.git', branch:'main'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                script {
+                    // Clean and build the Spring Boot application
+                    bat 'mvn clean install'
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                script {
+                    try {
+                        bat 'mvn  test'
+                        echo 'Running test cases...'
+                    } catch (Exception e) {
+                        error 'Error in running test cases.'
+                    }
+                }
+            }
+        }
+
+
+        
+        
+    }
+
+    
+}

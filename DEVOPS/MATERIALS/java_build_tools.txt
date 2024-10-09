@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Java Installed ?') {
+            steps {
+                bat 'java --version'
+                echo 'Java Installed'
+            }
+        }
+         stage('Maven Installed ?') {
+            steps {
+                bat 'mvn --version'
+                echo 'Maven Installed'
+            }
+        }
+        stage('Gradle Installed ?') {
+            steps {
+                bat 'gradle --version'
+                echo 'Gradle Installed'
+            }
+        }
+    }
+}
