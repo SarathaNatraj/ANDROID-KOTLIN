@@ -1,0 +1,65 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from the version control system
+                git url:'https://github.com/SarathaNatraj/product-application.git', branch:'main'
+            }
+        }
+         stage('Clean') {
+            steps {
+                script {
+                    // Clean and build the Spring Boot application
+                    bat 'mvn clean'
+                }
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                script {
+                    // Clean and build the Spring Boot application
+                    bat 'mvn install -DskipTests'
+                }
+            }
+        }
+        stage('Check Docker') {
+            steps {
+                script {
+                    // Check if Docker is installed
+                    try {
+                        bat 'docker --version'
+                        echo 'Docker is installed.'
+                    } catch (Exception e) {
+                        error 'Docker is not installed or not properly configured.'
+                    }
+                }
+            }
+        }
+
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build the Docker image
+                bat "docker build -t product-app-demo ."
+                //  bat "docker-compose down"
+               
+                }
+            }
+        }
+         stage('Run Docker Image') {
+            steps {
+                script {
+                    // run the Docker image
+                bat "docker run -p 9093:8080 product-app-demo"
+                //  bat "docker-compose down"
+               
+                }
+            }
+        }
+
+       
+    }
+}

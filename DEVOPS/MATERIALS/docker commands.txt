@@ -1,0 +1,40 @@
+Get all the images
+	docker images 
+
+Build a docker image
+	-> Dockerfile
+	docker build -t <name_of_image> .
+
+Run the docker image
+	
+	docker run -p 9093:8080 <name_of_image>
+	
+	docker build . demo
+
+docker --version
+display the version
+
+docker ps
+
+This command is used to list the running containers
+
+docker ps -a
+
+This command is used to show all the running and exited containers
+
+docker image ls - list of all the images
+
+docker rmi -f ${docker images -q} -  delete all docker images forcefully
+
+docker build -t <name_of_image> . - build the docker with image name -t(tagging) Maven_Demo . refers current directory Dockerfile 
+
+docker run <name_of_image>
+
+windows commands / Linux commands
+dir / ls - 
+
+https://www.geeksforgeeks.org/linux-vs-windows-commands/
+
+
+Docker is completing the jenkins(build automation) plus creating the image with the container
+
