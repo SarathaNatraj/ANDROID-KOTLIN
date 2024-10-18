@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.core:core-ktx:1.9.0-beta01@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/4d83c3bd5a22c399712f735c4abae557/transformed/core-ktx-1.9.0-beta01/res" />
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/4d83c3bd5a22c399712f735c4abae557/transformed/core-ktx-1.9.0-beta01/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/4d83c3bd5a22c399712f735c4abae557/transformed/core-ktx-1.9.0-beta01/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/modules-2/files-2.1/androidx.core/core-ktx/1.9.0-beta01/90bc3081943b41096717f4f6ce07351f4de007cc/core-ktx-1.9.0-beta01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

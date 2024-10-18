@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-database-ktx:20.0.5@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/33aac0d35067c97752b40e59e6c9596b/transformed/firebase-database-ktx-20.0.5/res" />
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/ee0dbb7ff6685570368f6a9e5c2177bb/transformed/firebase-database-ktx-20.0.5/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/ee0dbb7ff6685570368f6a9e5c2177bb/transformed/firebase-database-ktx-20.0.5/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/ee0dbb7ff6685570368f6a9e5c2177bb/transformed/firebase-database-ktx-20.0.5/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-database-ktx/20.0.5/94ca6d4dcd26321f10d47ec743def5bb335d20b1/firebase-database-ktx-20.0.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-database-ktx/20.0.5/77c14e1917a188ba4f3ffd3b3a9f95e7cd07d303/firebase-database-ktx-20.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

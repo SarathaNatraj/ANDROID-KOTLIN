@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.arch.core:core-runtime:2.1.0@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/da19d3d1b9110a38ee24ca65334cbce6/transformed/core-runtime-2.1.0/res" />
+      <root url="jar://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/591a713af4eb935d56337d8ea853544e/transformed/core-runtime-2.1.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/591a713af4eb935d56337d8ea853544e/transformed/core-runtime-2.1.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/591a713af4eb935d56337d8ea853544e/transformed/core-runtime-2.1.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-runtime/2.1.0/f19886651c9946b39f83d8c184fd0e2ce9f43c16/core-runtime-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.interpolator:interpolator:1.0.0@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/e3df75d297dc4e0b3ae5c5dd8bbec9f7/transformed/interpolator-1.0.0/res" />
+      <root url="jar://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/8810d97b0f2b8beaaf86d59a5ee6ffce/transformed/interpolator-1.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/8810d97b0f2b8beaaf86d59a5ee6ffce/transformed/interpolator-1.0.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/8810d97b0f2b8beaaf86d59a5ee6ffce/transformed/interpolator-1.0.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/modules-2/files-2.1/androidx.interpolator/interpolator/1.0.0/fefd5e3cbc479b6b4a9532d05688a1e659e8d3d2/interpolator-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

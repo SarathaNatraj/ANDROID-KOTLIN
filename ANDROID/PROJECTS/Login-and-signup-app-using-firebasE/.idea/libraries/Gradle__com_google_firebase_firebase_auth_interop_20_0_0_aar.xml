@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-auth-interop:20.0.0@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/2b5f49759ee1340575520b5da348a763/transformed/firebase-auth-interop-20.0.0/res" />
+      <root url="jar://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/a8363cc35c04cbb9c8e53b84399a913b/transformed/firebase-auth-interop-20.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/a8363cc35c04cbb9c8e53b84399a913b/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/transforms-3/a8363cc35c04cbb9c8e53b84399a913b/transformed/firebase-auth-interop-20.0.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../WEEK 5/MultipleLanguageInApp-master/MultipleLanguageInApp-master/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-auth-interop/20.0.0/8014b3cbc53e9c14226052dd919055a99d0d46d8/firebase-auth-interop-20.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

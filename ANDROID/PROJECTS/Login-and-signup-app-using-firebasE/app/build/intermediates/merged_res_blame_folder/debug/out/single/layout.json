@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\Saratha\\TRAINING\\GLOBAL LOGIC\\downloads\\WEEK 6\\Login-and-signup-app-using-firebasE\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\Saratha\\TRAINING\\GLOBAL LOGIC\\downloads\\WEEK 6\\Login-and-signup-app-using-firebasE\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Saratha\\TRAINING\\GLOBAL LOGIC\\downloads\\WEEK 6\\Login-and-signup-app-using-firebasE\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login_form.xml",
+        "source": "D:\\Saratha\\TRAINING\\GLOBAL LOGIC\\downloads\\WEEK 6\\Login-and-signup-app-using-firebasE\\app\\src\\main\\res\\layout\\activity_login_form.xml"
+    },
+    {
+        "merged": "D:\\Saratha\\TRAINING\\GLOBAL LOGIC\\downloads\\WEEK 6\\Login-and-signup-app-using-firebasE\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_welcome_window.xml",
+        "source": "D:\\Saratha\\TRAINING\\GLOBAL LOGIC\\downloads\\WEEK 6\\Login-and-signup-app-using-firebasE\\app\\src\\main\\res\\layout\\activity_welcome_window.xml"
+    }
+]
